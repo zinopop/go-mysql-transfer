@@ -63,11 +63,9 @@ func (s *Elastic6Endpoint) Connect() error {
 	//options = append(options, elastic.SetHealthcheckTimeout(time.Second * 100))
 	//options = append(options, elastic.SetHealthcheckTimeoutStartup(time.Second * 100))
 
-
 	//options = append(options, elastic.SetSnifferTimeout(100*time.Second))
 	// tcp短连需要用账号密码认证
-	options = append(options, elastic.SetBasicAuth("root","111111"))
-
+	options = append(options, elastic.SetBasicAuth(global.Cfg().ElsUser, global.Cfg().ElsPassword))
 
 	//options = append(options, elastic.SetScheme("bfbfbff6.virtua.com.br-0"))
 
@@ -228,7 +226,7 @@ func (s *Elastic6Endpoint) Consume(from mysql.Position, rows []*model.RowRequest
 		}
 	}
 
-	if bulk.NumberOfActions()==0{
+	if bulk.NumberOfActions() == 0 {
 		return nil
 	}
 
