@@ -9,8 +9,7 @@ COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o transfer .
 
-RUN mkdir publish && cp transfer publish && \
-    cp app_elastic.yml publish && cp -r web/statics publish \
+RUN mkdir publish && cp transfer publish && cp app_elastic.yml publish && cp -r web/statics publish
 
 # 第二阶段
 FROM alpine
