@@ -19,6 +19,7 @@ package endpoint
 
 import (
 	"context"
+	"fmt"
 	"github.com/juju/errors"
 	"github.com/olivere/elastic"
 	"github.com/siddontang/go-mysql/canal"
@@ -66,7 +67,8 @@ func (s *Elastic6Endpoint) Connect() error {
 	//options = append(options, elastic.SetSnifferTimeout(100*time.Second))
 	// tcp短连需要用账号密码认证
 	options = append(options, elastic.SetBasicAuth(global.Cfg().ElsUser, global.Cfg().ElsPassword))
-
+	fmt.Println("user", global.Cfg().ElsUser)
+	fmt.Println("user", global.Cfg().ElsPassword)
 	//options = append(options, elastic.SetScheme("bfbfbff6.virtua.com.br-0"))
 
 	//if global.Cfg().ElsUser != "" && global.Cfg().ElsPassword != "" {
