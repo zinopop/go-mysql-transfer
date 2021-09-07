@@ -3,11 +3,11 @@ addr: 192.168.18.37:3306
 user: root
 pass: root
 charset : utf8mb4
-slave_id: 1002 #slave ID
+slave_id: 1003 #slave ID
 flavor: mysql #mysql or mariadb,默认mysql
 
 #系统相关配置
-#data_dir: transfer_elastic #应用产生的数据存放地址，包括日志、缓存数据等，默认当前运行目录下store文件夹
+data_dir: transfer_elastic #应用产生的数据存放地址，包括日志、缓存数据等，默认当前运行目录下store文件夹
 
 #web admin相关配置
 enable_web_admin: false #是否启用web admin，默认false
@@ -15,8 +15,8 @@ web_admin_port: 8061 #web监控端口,默认8060
 
 #elasticsearch连接配置
 target: elasticsearch
-es_addrs: 191.191.191.246:9200 #连接地址，多个用逗号分隔
-es_version: 6 # Elasticsearch版本，支持6和7、默认为7
+es_addrs: 192.168.18.37:9200 #连接地址，多个用逗号分隔
+es_version: 7 # Elasticsearch版本，支持6和7、默认为7
 es_user: root
 es_password: 111111
 
@@ -27,163 +27,206 @@ rule:
     table: contacts
     redis_structure: list
     redis_key_value: contacts
+    order_by_column: id
   -
     schema: IM
     table: groups
     redis_structure: list
     redis_key_value: groups
+    order_by_column: id
   -
     schema: IM
     table: medias
     redis_structure: list
     redis_key_value: medias
+    order_by_column: id
   -
     schema: IM
     table: targets
     redis_structure: list
     redis_key_value: targets
+    order_by_column: id
   -
     schema: IM
     table: users
     redis_structure: list
     redis_key_value: users
+    order_by_column: id
   -
     schema: IM
     table:  messages
     redis_structure: list
     redis_key_value: messages
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fa4abc2c0deed0032421624
     redis_structure: list
     redis_key_value: messages_5fa4abc2c0deed0032421624
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fae0d03c765fd6c8574ac0f
     redis_structure: list
     redis_key_value: messages_5fae0d03c765fd6c8574ac0f
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fb5f3340cff6212c0afe65a
     redis_structure: list
     redis_key_value: messages_5fb5f3340cff6212c0afe65a
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fb918b4edc4177fe976238d
     redis_structure: list
     redis_key_value: messages_5fb918b4edc4177fe976238d
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fbfb539eabc344c974033b4
     redis_structure: list
     redis_key_value: messages_5fbfb539eabc344c974033b4
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fbfc575eabc344c9789f144
     redis_structure: list
     redis_key_value: messages_5fbfc575eabc344c9789f144
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fc0e0d467b8dd7459fe859d
     redis_structure: list
     redis_key_value: messages_5fc0e0d467b8dd7459fe859d
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fc4f91cc057695a0a58c0cd
     redis_structure: list
     redis_key_value: messages_5fc4f91cc057695a0a58c0cd
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fc05dfa098c80318a1e5226
     redis_structure: list
     redis_key_value: messages_5fc05dfa098c80318a1e5226
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fc6d5d2098c80318a3e4d17
     redis_structure: list
     redis_key_value: messages_5fc6d5d2098c80318a3e4d17
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fc43e20eabc344c97658705
     redis_structure: list
     redis_key_value: messages_5fc43e20eabc344c97658705
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fc74ce2eabc344c978a0dd7
     redis_structure: list
     redis_key_value: messages_5fc74ce2eabc344c978a0dd7
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fc201da7f1d500f69624960
     redis_structure: list
     redis_key_value: messages_5fc201da7f1d500f69624960
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fc456245fb2797f202bfb2a
     redis_structure: list
     redis_key_value: messages_5fc456245fb2797f202bfb2a
+    order_by_column: id
   -
     schema: IM
     table:  messages_5fce614368f9f20c0043e6b5
     redis_structure: list
     redis_key_value: messages_5fce614368f9f20c0043e6b5
+    order_by_column: id
   -
     schema: IM
     table:  messages_5ffbcf824bd28860c5b6130a
     redis_structure: list
     redis_key_value: messages_5ffbcf824bd28860c5b6130a
+    order_by_column: id
   -
     schema: IM
     table:  messages_5ffd1e5b7afaa02b098f1751
     redis_structure: list
     redis_key_value: messages_5ffd1e5b7afaa02b098f1751
+    order_by_column: id
   -
     schema: IM
     table:  messages_5ffdc9d69ee96e23759ded4e
     redis_structure: list
     redis_key_value: messages_5ffdc9d69ee96e23759ded4e
+    order_by_column: id
   -
     schema: IM
     table:  messages_603cea7e65058c65ed51a2bc
     redis_structure: list
     redis_key_value: messages_603cea7e65058c65ed51a2bc
+    order_by_column: id
   -
     schema: IM
     table:  messages_603da032d81d7014c458d5e8
     redis_structure: list
     redis_key_value: messages_603da032d81d7014c458d5e8
+    order_by_column: id
   -
     schema: IM
     table:  messages_1126015726
     redis_structure: list
     redis_key_value: messages_1126015726
+    order_by_column: id
   -
     schema: IM
     table:  messages_1218605686
     redis_structure: list
     redis_key_value: messages_1218605686
+    order_by_column: id
   -
     schema: IM
     table:  messages_1626769006
     redis_structure: list
     redis_key_value: messages_1626769006
+    order_by_column: id
   -
     schema: IM
     table:  messages_1629687986
     redis_structure: list
     redis_key_value: messages_1629687986
+    order_by_column: id
   -
     schema: IM
     table:  messages_1632969039
     redis_structure: list
     redis_key_value: messages_1632969039
+    order_by_column: id
   -
     schema: IM
     table:  messages_1688335687
     redis_structure: list
     redis_key_value: messages_1688335687
+    order_by_column: id
   -
     schema: IM
-    table: message_collect
+    table: messages_1769183577
     redis_structure: list
-    redis_key_value: message_collect
+    redis_key_value: messages_1769183577
+  -
+    schema: IM
+    table: messages_1914046028
+    redis_structure: list
+    redis_key_value: messages_1914046028
+#  -
+#    schema: IM
+#    table: message_collect
+#    redis_structure: list
+#    redis_key_value: message_collect
+#    order_by_column: id

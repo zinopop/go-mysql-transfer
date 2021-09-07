@@ -41,9 +41,9 @@ rule:
     redis_key_value: contacts
   -
     schema: IM
-    table: groups
+    table: grouplist
     redis_structure: list
-    redis_key_value: groups
+    redis_key_value: grouplist
   -
     schema: IM
     table: medias
@@ -166,6 +166,11 @@ rule:
     redis_key_value: messages_603da032d81d7014c458d5e8
   -
     schema: IM
+    table: messages_6063c87389063b65014e88d9
+    redis_structure: list
+    redis_key_value: messages_6063c87389063b65014e88d9
+  -
+    schema: IM
     table:  messages_1126015726
     redis_structure: list
     redis_key_value: messages_1126015726
@@ -194,8 +199,23 @@ rule:
     table:  messages_1688335687
     redis_structure: list
     redis_key_value: messages_1688335687
-#  -
-#    schema: IM
-#    table: message_collect
-#    redis_structure: list
-#    redis_key_value: message_collect
+  -
+    schema: IM
+    table: messages_1769183577
+    redis_structure: list
+    redis_key_value: messages_1769183577
+  -
+    schema: IM
+    table: messages_1914046028
+    redis_structure: list
+    redis_key_value: messages_1914046028
+  -
+    schema: IM
+    table: messages_191208246
+    redis_structure: list
+    redis_key_value: messages_191208246
+  -
+    schema: IM
+    table: message_collect
+    redis_structure: list
+    redis_key_value: message_collect
